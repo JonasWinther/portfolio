@@ -1,0 +1,133 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.responsive {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+.main-head,
+.content {
+  background-color: #2b4e69;
+  background-size: cover;
+  padding: 20px;
+  padding-left: 20%;
+}
+.content h1 {
+  font-size: 48px;
+}
+.content p {
+  font-size: 20px;
+}
+.main-footer {
+  background-color: #74442d;
+  grid-area: footer;
+  padding-left: 20%;
+}
+.content {
+  color: #e0e4f4;
+  grid-area: content;
+  padding-right: 20%;
+  text-align: center;
+}
+.main-head {
+  grid-area: header;
+}
+.projects {
+  background-color: #e0e4f4;
+  color: black;
+  grid-area: projects;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.projects h1 {
+  font-size: 40px;
+}
+.billeder {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 10%;
+}
+.container {
+  position: relative;
+  width: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #ff9a00;
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+.container2 {
+  position: relative;
+  width: auto;
+}
+.overlay2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #020e24;
+}
+.container2:hover .overlay2 {
+  opacity: 1;
+}
+.container3 {
+  position: relative;
+  width: auto;
+}
+.overlay3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #16172f;
+}
+.container3:hover .overlay3 {
+  opacity: 1;
+}
+.text {
+  color: #e0e4f4;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.wrapper {
+  font-family: "Ubuntu", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "content"
+    "projects"
+    "footer";
+}
