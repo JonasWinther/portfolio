@@ -8,6 +8,10 @@ body {
   max-width: 500px;
   height: auto;
 }
+.logo {
+  height: 100px;
+  filter: invert(1);
+}
 .main-head,
 .content {
   background-color: #2b4e69;
@@ -22,9 +26,18 @@ body {
   font-size: 20px;
 }
 .main-footer {
-  background-color: #74442d;
+  background-color: #7aa5c6;
   grid-area: footer;
   padding-left: 20%;
+}
+.socials {
+  background-color: #7aa5c6;
+  grid-area: socials;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.socials a {
+  text-decoration: none;
 }
 .content {
   color: #e0e4f4;
@@ -41,20 +54,24 @@ body {
   grid-area: projects;
   padding-left: 20%;
   padding-right: 20%;
+  padding-bottom: 10%;
 }
 .projects h1 {
   font-size: 40px;
+  padding-top: 10%;
+}
+.projectsgrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
 }
 .billeder {
   display: block;
   width: 100%;
-  max-width: 300px;
   height: auto;
-  margin-bottom: 10%;
 }
-.container {
+.projekt1 {
   position: relative;
-  width: auto;
 }
 .overlay {
   position: absolute;
@@ -64,15 +81,14 @@ body {
   right: 0;
   height: 100%;
   width: 100%;
-  max-width: 300px;
   opacity: 0;
   transition: 0.5s ease;
   background-color: #ff9a00;
 }
-.container:hover .overlay {
+.projekt1:hover .overlay {
   opacity: 1;
 }
-.container2 {
+.projekt2 {
   position: relative;
   width: auto;
 }
@@ -84,15 +100,14 @@ body {
   right: 0;
   height: 100%;
   width: 100%;
-  max-width: 300px;
   opacity: 0;
   transition: 0.5s ease;
   background-color: #020e24;
 }
-.container2:hover .overlay2 {
+.projekt2:hover .overlay2 {
   opacity: 1;
 }
-.container3 {
+.projekt3 {
   position: relative;
   width: auto;
 }
@@ -104,12 +119,11 @@ body {
   right: 0;
   height: 100%;
   width: 100%;
-  max-width: 300px;
   opacity: 0;
   transition: 0.5s ease;
   background-color: #16172f;
 }
-.container3:hover .overlay3 {
+.projekt3:hover .overlay3 {
   opacity: 1;
 }
 .text {
@@ -121,13 +135,133 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+.kompetencer {
+  grid-area: kompetencer;
+  background-color: #e0e4f4;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 5%;
+}
+.kompetencer h1 {
+  font-size: 48px;
+}
+.kompetencer h2 {
+  font-size: 40px;
+}
+.kompetencer p {
+  font-size: 20px;
+}
+.design {
+  grid-area: design;
+}
+.animation {
+  grid-area: animation;
+}
+.designtext {
+  grid-area: designtext;
+}
+.animationtext {
+  grid-area: animationtext;
+}
+.kompetencebilleder {
+  width: 100px;
+}
+.kompetencergrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "design"
+    "designtext"
+    "animation"
+    "animationtext";
+}
+.footerbilleder {
+  width: 20px;
+}
+.footersocials {
+  width: 30px;
+  padding-right: 10px;
+}
+.kontakt {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.kontakttekst {
+  padding-left: 10px;
+  font-size: 18px;
+}
+.kontakttekst a {
+  text-decoration: none;
+  color: black;
+}
 .wrapper {
   font-family: "Ubuntu", sans-serif;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    "header"
-    "content"
-    "projects"
-    "footer";
+    "header header"
+    "content content"
+    "projects projects"
+    "kompetencer kompetencer"
+    "footer socials";
+}
+@media (min-width: 800px) {
+  .main-head {
+    padding-left: 10%;
+  }
+  .content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .content p {
+    padding-left: 18%;
+    padding-right: 18%;
+  }
+  .projectsgrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
+  .projects {
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+  }
+  .socials {
+    padding-left: 5%;
+  }
+  .kompetencer {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .kompetencergrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "design animation"
+      "designtext animationtext";
+    grid-gap: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .responsive {
+    padding-bottom: 5%;
+    padding-left: 10%;
+    float: right;
+  }
+  .projectsgrid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+  }
+  .content h1 {
+    padding-top: 100px;
+  }
+  .content p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .kontaktflex {
+    display: flex;
+    align-items: center;
+    column-gap: 5%;
+  }
 }
